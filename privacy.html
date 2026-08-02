@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anvil Privacy Policy</title>
+<style>
+  :root {
+    color-scheme: light dark;
+  }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+         max-width: 720px; margin: 40px auto; padding: 0 20px; line-height: 1.6;
+         color: #1c1c1e; background: #ffffff; }
+  h1 { font-size: 1.8rem; } h2 { font-size: 1.25rem; margin-top: 2rem; }
+  code { background: #f2f2f7; padding: 1px 5px; border-radius: 4px; }
+  a { color: #0a69da; }
+  .updated { color: #6c6c70; font-size: 0.9rem; }
+  nav { margin-bottom: 1.5rem; font-size: 0.95rem; }
+  @media (prefers-color-scheme: dark) {
+    body { color: #f2f2f7; background: #1c1c1e; }
+    code { background: #2c2c2e; }
+    a { color: #6cb2ff; }
+    .updated { color: #9a9a9e; }
+  }
+</style>
+</head>
+<body>
+<nav><a href="index.html">Anvil</a> &middot; <a href="privacy.html">Privacy</a> &middot; <a href="support.html">Support</a></nav>
+
+<h1>Anvil Privacy Policy</h1>
+<p class="updated">Effective date: August 2, 2026</p>
+
+<p>Anvil (published as "Anvil: Workout Tracker") is a strength training log. This
+policy explains what data Anvil handles, where it goes, and your choices. Anvil
+does not track you across other companies' apps or websites, does not show ads,
+and does not sell your data.</p>
+
+<h2>Who we are</h2>
+<p>Anvil is an independent app developed by Joel Vandervalk. For any privacy
+question, or to request deletion of your data, contact
+<a href="mailto:vandervalkjoel@gmail.com">vandervalkjoel@gmail.com</a>.</p>
+
+<h2>Your workouts stay on your device</h2>
+<p>Anvil's core functionality, your programs, workout history, sets, reps, and
+weights, is stored entirely on your device using Apple's on-device storage
+(SwiftData). No account is required to use the app, and this data is never
+uploaded anywhere by us. If you use Apple's iCloud backup for your device, your
+workout data may be included in that backup, which is between you and Apple.</p>
+
+<h2>Optional AI features</h2>
+<p>Anvil includes two optional AI features: an AI workout generator and an AI
+progression coach. These are opt-in; the rest of the app works fully without
+them. Using either feature requires signing in:</p>
+<ul>
+  <li><strong>Sign in with Apple.</strong> You can choose to share your name and
+  email with us (Apple may provide a private relay email address instead of your
+  real one, at your choice), or</li>
+  <li><strong>Continue as guest.</strong> Anvil creates an anonymous account with
+  no name or email attached.</li>
+</ul>
+<p>When you use an AI feature, we send the following to our backend to generate
+your result:</p>
+<ul>
+  <li><strong>A summary of relevant workout data.</strong> For the AI workout
+  generator, this is your stated goal, training days per week, session length,
+  experience level, and available equipment. For the progression coach, this is
+  a summary of your recent sets, reps, and weights for the exercise in question.</li>
+  <li><strong>Any text you type.</strong> Free-text notes you enter (for example,
+  equipment details or other context for the workout generator) are sent along
+  with your request.</li>
+  <li><strong>An optional photo.</strong> If you choose to attach a photo (for
+  example, of your home gym equipment) when generating a workout, that photo is
+  sent as part of the request. Photos are never required.</li>
+</ul>
+<p>These requests are processed by our backend (Supabase) and by Anthropic's
+Claude API to produce your result. Requests are stored server-side so the
+service can operate and so we can rate-limit and troubleshoot it. This data is
+used solely to provide the AI features to you; it is not used for advertising
+and is not sold.</p>
+
+<h2>Where your data goes</h2>
+<ul>
+  <li><strong>Supabase</strong> hosts our backend: your account (if you sign in),
+  and the AI requests described above.</li>
+  <li><strong>Anthropic (Claude)</strong> processes the content of AI requests
+  (workout summaries, your typed text, and any attached photo) to generate
+  workout plans and progression suggestions.</li>
+</ul>
+<p>We do not share your data with any other third parties. We do not sell your
+data, show ads, or use it for cross-app or cross-site tracking.</p>
+
+<h2>Data retention and your choices</h2>
+<p>You can delete your account and the associated data stored on our backend
+directly in the app, from Settings. You can also request deletion by emailing
+<a href="mailto:vandervalkjoel@gmail.com">vandervalkjoel@gmail.com</a> and we
+will remove it. Your on-device workout history is controlled entirely by you
+through the app and your device, independent of any account.</p>
+
+<h2>Children</h2>
+<p>Anvil is not directed at children under 13 and we do not knowingly collect
+their data.</p>
+
+<h2>Changes</h2>
+<p>We may update this policy as the app evolves. Material changes will be
+reflected here with a new effective date.</p>
+
+</body>
+</html>
