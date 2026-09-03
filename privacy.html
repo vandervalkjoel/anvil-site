@@ -12,6 +12,7 @@
          max-width: 720px; margin: 40px auto; padding: 0 20px; line-height: 1.6;
          color: #1c1c1e; background: #ffffff; }
   h1 { font-size: 1.8rem; } h2 { font-size: 1.25rem; margin-top: 2rem; }
+  h3 { font-size: 1.05rem; margin-top: 1.4rem; }
   code { background: #f2f2f7; padding: 1px 5px; border-radius: 4px; }
   a { color: #0a69da; }
   .updated { color: #6c6c70; font-size: 0.9rem; }
@@ -28,7 +29,7 @@
 <nav><a href="index.html">Anvil</a> &middot; <a href="privacy.html">Privacy</a> &middot; <a href="support.html">Support</a></nav>
 
 <h1>Anvil Privacy Policy</h1>
-<p class="updated">Effective date: August 2, 2026</p>
+<p class="updated">Effective date: September 3, 2026</p>
 
 <p>Anvil (published as "Anvil: Workout Tracker") is a strength training log. This
 policy explains what data Anvil handles, where it goes, and your choices. Anvil
@@ -48,9 +49,23 @@ uploaded anywhere by us. If you use Apple's iCloud backup for your device, your
 workout data may be included in that backup, which is between you and Apple.</p>
 
 <h2>Optional AI features</h2>
-<p>Anvil includes two optional AI features: an AI workout generator and an AI
-progression coach. These are opt-in; the rest of the app works fully without
-them. Using either feature requires signing in:</p>
+<p>Anvil has two optional AI features. Both are powered by Gemini, an artificial
+intelligence service operated by Google.</p>
+<ul>
+  <li><strong>The Coach tab.</strong> You type a request about your training
+  plan (build a program, change today's workout, adjust for travel) and the
+  coach answers with a plan you can review, apply, or discard.</li>
+  <li><strong>The in-workout briefing.</strong> When you start a workout, the
+  coach suggests a weight and rep target for each lift in that session, based
+  on your recent sets for those lifts.</li>
+</ul>
+<p>Both are optional, and the rest of the app works fully without them. Nothing
+is sent to Google unless you use one of these features and have agreed to it
+first.</p>
+
+<h3>Signing in</h3>
+<p>Using either feature requires an account on our backend, so that your
+requests belong to you and can be deleted with you. You can:</p>
 <ul>
   <li><strong>Sign in with Apple.</strong> You can choose to share your name and
   email with us (Apple may provide a private relay email address instead of your
@@ -58,40 +73,68 @@ them. Using either feature requires signing in:</p>
   <li><strong>Continue as guest.</strong> Anvil creates an anonymous account with
   no name or email attached.</li>
 </ul>
-<p>When you use an AI feature, we send the following to our backend to generate
-your result:</p>
+
+<h3>Your permission comes first</h3>
+<p>The first time an AI feature is about to send anything, the app shows you
+what will be sent and who receives it, and asks for your agreement. Nothing is
+sent unless you agree. If you decline, the request is discarded and nothing
+leaves your phone, and you are asked again the next time rather than being
+opted in quietly. Signing out resets this answer, so the next person to sign in
+on the phone is asked for themselves.</p>
+
+<h3>What a Coach ask sends</h3>
 <ul>
-  <li><strong>A summary of relevant workout data.</strong> For the AI workout
-  generator, this is your stated goal, training days per week, session length,
-  experience level, and available equipment. For the progression coach, this is
-  a summary of your recent sets, reps, and weights for the exercise in question.</li>
-  <li><strong>Any text you type.</strong> Free-text notes you enter (for example,
-  equipment details or other context for the workout generator) are sent along
-  with your request.</li>
-  <li><strong>An optional photo.</strong> If you choose to attach a photo (for
-  example, of your home gym equipment) when generating a workout, that photo is
-  sent as part of the request. Photos are never required.</li>
+  <li>the text you type;</li>
+  <li>the structure of your current program: its day names, the exercises on
+  each day, and their set counts and rep ranges (not your logged sets);</li>
+  <li>which day is next in your rotation;</li>
+  <li>your equipment setup: the equipment you have checked off, whether you use
+  a plate inventory, the settings of any plate-loaded machines, and, while a
+  travel window is active, its end date and the equipment available there;</li>
+  <li>your weight increment;</li>
+  <li>the previous turns of the current conversation, up to the last ten, as
+  text only;</li>
+  <li>a photo, PDF, or plain-text document, only if you attach one; and</li>
+  <li>the app's built-in exercise catalog, which is not personal data.</li>
 </ul>
-<p>These requests are processed by our backend (Supabase) and by Anthropic's
-Claude API to produce your result. Requests are stored server-side so the
-service can operate and so we can rate-limit and troubleshoot it. This data is
-used solely to provide the AI features to you; it is not used for advertising
-and is not sold.</p>
+
+<h3>What an in-workout briefing sends</h3>
+<ul>
+  <li>the lifts in that session, with their target sets and rep ranges;</li>
+  <li>for each of those lifts, your recent completed sessions: the date, and
+  the weight, reps, and set type of each set;</li>
+  <li>your weight increment for each lift; and</li>
+  <li>your equipment setup, as described above.</li>
+</ul>
+
+<h3>What is never sent to Google</h3>
+<p>Your name, your email address, your Apple ID, your account identifier, your
+device identifiers, your location, and any part of your training log beyond
+what is listed above.</p>
+
+<h3>How Google handles it</h3>
+<p>We use Google's paid Gemini API service, under which Google does not use the
+prompts we send or the responses it returns to train or improve its products.
+We do not use your data to train any artificial intelligence model either.
+Google returns a plan or a set of weight and rep targets, which you can review,
+edit, apply, or discard in the app.</p>
 
 <h2>Where your data goes</h2>
 <ul>
-  <li><strong>Supabase</strong> hosts our backend: your account (if you sign in),
+  <li><strong>Supabase</strong> hosts our backend: your account (if you sign in)
   and the AI requests described above.</li>
-  <li><strong>Anthropic (Claude)</strong> processes the content of AI requests
-  (workout summaries, your typed text, and any attached photo) to generate
-  workout plans and progression suggestions.</li>
+  <li><strong>Google</strong> operates the Gemini service that processes the
+  content of each AI request to produce your plan or briefing.</li>
 </ul>
 <p>We do not share your data with any other third parties. We do not sell your
 data, show ads, or use it for cross-app or cross-site tracking.</p>
 
 <h2>Data retention and your choices</h2>
-<p>You can delete your account and the associated data stored on our backend
-directly in the app, from Settings. You can also request deletion by emailing
+<p>Each AI request, including any attachment and the answer that came back, is
+stored on our backend under your account so the feature can work, so we can
+limit abuse, and so we can troubleshoot failures. These records are kept until
+you delete your account. You can delete your account and every request stored
+with it directly in the app, from Settings, or by emailing
 <a href="mailto:vandervalkjoel@gmail.com">vandervalkjoel@gmail.com</a> and we
 will remove it. Your on-device workout history is controlled entirely by you
 through the app and your device, independent of any account.</p>
