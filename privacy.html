@@ -29,7 +29,7 @@
 <nav><a href="index.html">Anvil</a> &middot; <a href="privacy.html">Privacy</a> &middot; <a href="support.html">Support</a></nav>
 
 <h1>Anvil Privacy Policy</h1>
-<p class="updated">Effective date: September 28, 2026</p>
+<p class="updated">Effective date: October 28, 2026</p>
 
 <p>Anvil (published as "Anvil: Workout Tracker") is a strength training log. This
 policy explains what data Anvil handles, where it goes, and your choices. Anvil
@@ -52,24 +52,30 @@ settings follow you. Both are stored under your Apple ID and encrypted by
 Apple; we cannot read either. You can turn iCloud off for Anvil, or delete
 what it stored, in your iPhone's Settings under your name, iCloud, then
 Anvil.</p>
+<p>If you turn on Gym arrival, Anvil saves your gym's location on your iPhone
+and, with your permission to use location Always, your iPhone wakes Anvil when
+you arrive there so it can show one notification a day. Anvil does not track
+where you go: it only learns that you arrived at the spot you saved. The
+location is not sent to us or to Anthropic, and is not synced to your other
+devices. If you choose your gym on the map, the gym map and its search use
+Apple Maps, which receives the area the map shows and any search text. You can
+remove your gym any time in Anvil's Settings.</p>
 
-<h2>Optional AI features</h2>
-<p>Anvil has two optional AI features. Both are powered by Gemini, an artificial
-intelligence service operated by Google.</p>
-<ul>
-  <li><strong>The Coach tab.</strong> You type a request about your training
-  plan (build a program, change today's workout, adjust for travel) and the
-  coach answers with a plan you can review, apply, or discard.</li>
-  <li><strong>The in-workout briefing.</strong> When you start a workout, the
-  coach suggests a weight and rep target for each lift in that session, based
-  on your recent sets for those lifts.</li>
-</ul>
-<p>Both are optional, and the rest of the app works fully without them. Nothing
-is sent to Google unless you use one of these features and have agreed to it
+<h2>The optional AI coach</h2>
+<p>Anvil has one optional AI feature, the Coach, which you reach from the Coach
+tab or from the Travel sheet. It is powered by Claude,
+an artificial intelligence service operated by Anthropic. You type a request
+about your training plan (build a program, change today's workout, adjust for
+travel) and the coach answers with a plan you can review, apply, or discard.</p>
+<p>The Coach is optional, and the rest of the app works fully without it.
+Nothing is sent to Anthropic unless you use the Coach and have agreed to it
 first.</p>
+<p>The in-workout briefing, which suggests a next step for each lift as you
+train, is worked out on your iPhone from your own logged sets. It does not use
+AI, needs no account, and sends nothing to us or to Anthropic.</p>
 
 <h3>Signing in</h3>
-<p>Using either feature requires an account on our backend, so that your
+<p>Using the Coach requires an account on our backend, so that your
 requests belong to you and can be deleted with you. You can:</p>
 <ul>
   <li><strong>Sign in with Apple.</strong> You can choose to share your name and
@@ -80,7 +86,7 @@ requests belong to you and can be deleted with you. You can:</p>
 </ul>
 
 <h3>Your permission comes first</h3>
-<p>The first time an AI feature is about to send anything, the app shows you
+<p>The first time the Coach is about to send anything, the app shows you
 what will be sent and who receives it, and asks for your agreement. Nothing is
 sent unless you agree. If you decline, the request is discarded and nothing
 leaves your phone, and you are asked again the next time rather than being
@@ -90,56 +96,55 @@ on the phone is asked for themselves.</p>
 <h3>What a Coach ask sends</h3>
 <ul>
   <li>the text you type;</li>
-  <li>the structure of your current program: its day names, the exercises on
-  each day, and their set counts and rep ranges (not your logged sets);</li>
+  <li>the structure of your current program: its name, its day names and
+  focus, the exercises on each day and how they are grouped into supersets, and
+  their set counts and rep ranges;</li>
+  <li>for each exercise in your program, the weight and reps of the heaviest
+  set from the last session you logged it (not the rest of your training
+  log);</li>
   <li>which day is next in your rotation;</li>
   <li>your equipment setup: the equipment you have checked off, whether you use
-  a plate inventory, the settings of any plate-loaded machines, and, while a
-  travel window is active, its end date and the equipment available there;</li>
-  <li>your weight increment;</li>
+  a plate inventory, the settings of any plate-loaded machines, and the end
+  date and equipment of a travel window, including one you are planning when you
+  ask the Coach to adapt for travel;</li>
+  <li>your preferred weight unit (pounds or kilograms);</li>
   <li>the previous turns of the current conversation, up to the last ten, as
   text (attachments are never re-sent);</li>
   <li>a photo, PDF, or plain-text document, only if you attach one; and</li>
   <li>the app's built-in exercise catalog, which is not personal data.</li>
 </ul>
 
-<h3>What an in-workout briefing sends</h3>
-<ul>
-  <li>the lifts in that session, with their target sets and rep ranges;</li>
-  <li>for each of those lifts, your recent completed sessions: the date, and
-  the weight, reps, and set type of each set;</li>
-  <li>your weight increment for each lift;</li>
-  <li>the app's own next-step suggestion for each lift (an action, weight,
-  and reps worked out from the sets above), which the coach explains
-  rather than replaces; and</li>
-  <li>your equipment setup, as described above.</li>
-</ul>
-
-<h3>What is never sent to Google</h3>
+<h3>What is never sent to Anthropic</h3>
 <p>Anvil never sends your name, your email address, your Apple ID, your
-account identifier, your device identifiers, or your location to Google, and
+account identifier, your device identifiers, or your location to Anthropic, and
 sends no part of your training log beyond what is listed above. A document
 you choose to attach is sent as you provide it, so anything inside it (an
 author name in a PDF, for example) travels with it.</p>
 
-<h3>How Google handles it</h3>
-<p>We use Google's paid Gemini API service, under which Google does not use the
-prompts we send or the responses it returns to train or improve its products.
+<h3>How Anthropic handles it</h3>
+<p>We use Anthropic's Claude API under its commercial terms, under which
+Anthropic may not train its models on the prompts we send or the responses it
+returns.
 We do not use your data to train any artificial intelligence model either.
-Google returns a plan or a set of weight and rep targets, which you can review,
+Claude returns a plan, which you can review,
 edit, apply, or discard in the app.</p>
 
 <h2>Where your data goes</h2>
 <ul>
   <li><strong>Supabase</strong> hosts our backend: your account (if you sign in)
   and the AI requests described above.</li>
-  <li><strong>Google</strong> operates the Gemini service that processes the
-  content of each AI request to produce your plan or briefing.</li>
+  <li><strong>Anthropic</strong> operates the Claude service that processes the
+  content of each Coach request to produce your plan.</li>
+  <li><strong>Apple Maps</strong> is used only when you open the gym map: it
+  receives the area the map shows and any search text, sent straight from your
+  iPhone to Apple, never through Anvil.</li>
 </ul>
-<p>Both providers process this data only to provide their service to Anvil,
-under contractual data protection terms that give your data the same or equal
-protection described in this policy.</p>
-<p>We do not share your data with any other third parties. We do not sell your
+<p>Supabase and Anthropic process this data only to provide their service to
+Anvil, under contractual data protection terms that give your data the same or
+equal protection described in this policy. Apple Maps is a direct connection
+from your iPhone, described above, and is not covered by those terms.</p>
+<p>Apart from the services listed above, we do not share your data with any
+other third parties. We do not sell your
 data, show ads, or use it for cross-app or cross-site tracking.</p>
 
 <h2>Data retention and your choices</h2>
