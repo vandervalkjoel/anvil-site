@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Delete your Anvil account</title>
+<style>
+  :root {
+    color-scheme: light dark;
+  }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+         max-width: 720px; margin: 40px auto; padding: 0 20px; line-height: 1.6;
+         color: #1c1c1e; background: #ffffff; }
+  h1 { font-size: 1.8rem; } h2 { font-size: 1.25rem; margin-top: 2rem; }
+  code { background: #f2f2f7; padding: 1px 5px; border-radius: 4px; }
+  a { color: #0a69da; }
+  .updated { color: #6c6c70; font-size: 0.9rem; }
+  nav { margin-bottom: 1.5rem; font-size: 0.95rem; }
+  dt { font-weight: 600; margin-top: 1.1rem; }
+  dd { margin-left: 0; color: inherit; }
+  @media (prefers-color-scheme: dark) {
+    body { color: #f2f2f7; background: #1c1c1e; }
+    code { background: #2c2c2e; }
+    a { color: #6cb2ff; }
+    .updated { color: #9a9a9e; }
+  }
+</style>
+</head>
+<body>
+<nav><a href="index.html">Anvil</a> &middot; <a href="privacy.html">Privacy</a> &middot; <a href="delete-account.html">Delete account</a> &middot; <a href="support.html">Support</a></nav>
+
+<h1>How to delete your Anvil account</h1>
+<p class="updated">Anvil: Workout Tracker (iPhone) and Anvil (Android), by Joel Vandervalk. Last updated November 9, 2026.</p>
+
+<p>You only have an Anvil account if you signed in to use the optional AI Coach.
+This page explains how to delete that account and the data stored with it. It does
+not apply to the workouts on your phone, which never leave your device unless you
+use your phone's backup (see "What is not deleted" below).</p>
+
+<h2>Delete it in the app (fastest)</h2>
+<h3>Android</h3>
+<ol>
+  <li>Open Anvil and go to Settings.</li>
+  <li>In the Account section, tap <strong>Delete account</strong>.</li>
+  <li>Confirm. Anvil deletes your account and signs you out.</li>
+</ol>
+<h3>iPhone</h3>
+<ol>
+  <li>Open Anvil and go to Settings, then Account.</li>
+  <li>Tap <strong>Delete account</strong>.</li>
+  <li>Confirm. Anvil deletes your account and signs you out.</li>
+</ol>
+<p>Deleting a guest account has to happen this way, in the app. A guest account has
+no name or email, so once you sign out, or on Android uninstall the app, it can no
+longer be reached from your phone and we cannot match it to you. On Android, the
+same happens if you clear the app's storage or move to a new phone (a backup brings
+your workouts back but not your sign-in), so delete the account first; uninstalling
+does not delete it. On iPhone, uninstalling does not sign you out, so if you removed Anvil and have
+not signed out, reinstall it and delete the account from Settings, then Account.</p>
+
+<h2 id="by-email">Ask by email</h2>
+<p>Deleting it in the app is the only route for a guest account, which has no email
+address for us to match. If you cannot open the app, and your account has an email
+address (you signed in with Apple), email
+<a href="mailto:vandervalkjoel@gmail.com">vandervalkjoel@gmail.com</a> from that
+address with the subject "Delete my Anvil account" and say which app you used. We
+will delete the account and its data promptly, and reply when it is done.
+You do not need to reinstall the app.</p>
+
+
+<h2>What is deleted</h2>
+<ul>
+  <li>Your Anvil account on our backend (Supabase), including the name and email
+  address attached to it if you shared them.</li>
+  <li>Every Coach request stored under your account: the text you typed, the
+  program and equipment details that were sent with it, any photo or document you
+  attached, and the answer that came back.</li>
+  <li>On the phone, Anvil also clears its stored sign-in, your Coach conversations
+  and your Coach agreement.</li>
+</ul>
+
+<h2>What is not deleted</h2>
+<ul>
+  <li><strong>Your workouts on your phone.</strong> Programs, history, sets, reps
+  and weights stay on the device until you delete them or uninstall the app.</li>
+  <li><strong>Your own backup copy.</strong> The iCloud copy on iPhone, or the
+  Google Account backup on Android, is held by Apple or Google under your account.
+  Delete it in your phone's settings (see the <a href="privacy.html">Privacy
+  Policy</a>).</li>
+  <li><strong>Anonymous usage records.</strong> For each Coach call the backend
+  keeps the model used, token counts, timing, the outcome and a fingerprint of the
+  request. It holds none of your text, program or attachment, and deleting your
+  account cuts its link to you. These records have no set end date. How Anthropic handles Coach requests is described
+  in the Privacy Policy.</li>
+</ul>
+
+<h2>Questions</h2>
+<p>See the <a href="privacy.html">Privacy Policy</a> or write to
+<a href="mailto:vandervalkjoel@gmail.com">vandervalkjoel@gmail.com</a>.</p>
+
+</body>
+</html>

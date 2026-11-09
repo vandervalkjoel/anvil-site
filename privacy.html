@@ -26,15 +26,17 @@
 </style>
 </head>
 <body>
-<nav><a href="index.html">Anvil</a> &middot; <a href="privacy.html">Privacy</a> &middot; <a href="support.html">Support</a></nav>
+<nav><a href="index.html">Anvil</a> &middot; <a href="privacy.html">Privacy</a> &middot; <a href="delete-account.html">Delete account</a> &middot; <a href="support.html">Support</a></nav>
 
 <h1>Anvil Privacy Policy</h1>
-<p class="updated">Effective date: October 28, 2026</p>
+<p class="updated">Effective date: November 9, 2026</p>
 
-<p>Anvil (published as "Anvil: Workout Tracker") is a strength training log. This
-policy explains what data Anvil handles, where it goes, and your choices. Anvil
-does not track you across other companies' apps or websites, does not show ads,
-and does not sell your data.</p>
+<p>Anvil (published as "Anvil: Workout Tracker" on the App Store, and as Anvil
+on Google Play) is a strength training log for iPhone and Android. This
+policy explains what data Anvil handles, where it goes, and your choices. It
+covers both apps; a paragraph that applies to one of them says so. Anvil does
+not track you across other companies' apps or websites, does not show ads, and
+does not sell your data.</p>
 
 <h2>Who we are</h2>
 <p>Anvil is an independent app developed by Joel Vandervalk. For any privacy
@@ -43,8 +45,12 @@ question, or to request deletion of your data, contact
 
 <h2>Your workouts stay in your control</h2>
 <p>Anvil's core functionality, your programs, workout history, sets, reps, and
-weights, is stored on your device using Apple's on-device storage (SwiftData).
-No account is required to use the app, and this data is never uploaded to us.</p>
+weights, is stored on your device. On iPhone that is Apple's on-device storage
+(SwiftData). On Android it is a database on the phone (Room) and the app's
+settings files (DataStore). No account is required to use the app, and this
+data is never uploaded to us.</p>
+
+<h3>On iPhone: iCloud and location</h3>
 <p>If your iPhone is signed in to iCloud, Anvil also keeps a copy of this data
 in your own private iCloud database, and keeps your equipment and lift settings
 in iCloud's key-value storage, so a new phone gets your history back and your
@@ -61,29 +67,52 @@ devices. If you choose your gym on the map, the gym map and its search use
 Apple Maps, which receives the area the map shows and any search text. You can
 remove your gym any time in Anvil's Settings.</p>
 
+<h3>On Android: backup, notifications and permissions</h3>
+<p>Anvil for Android allows Android's own backup. When your phone's backup is
+on, Android may copy your workout database and settings to your Google Account's
+backup, and may restore them when you set up a new phone. That copy is held by
+Google under your Google Account, and we cannot read it. Your Anvil sign-in, your
+agreement to send data to the Coach, and your Coach conversations are left out of
+the backup. You can turn backup off, or delete what it stored, in your phone's
+Settings under Google, then Backup.</p>
+<p>While a workout is running, Anvil shows an ongoing notification and uses a
+foreground service so the rest timer and the notification keep working when the
+screen is off. It vibrates when a rest or countdown ends and asks once for
+permission to show notifications. These read no sensor and send nothing. Anvil
+for Android does not ask for your location, contacts, camera, microphone or
+storage. Its only network permission is the internet access the Coach needs. Android also
+requires the high-sampling-rate-sensors permission for this kind of foreground
+service; it needs no prompt, and Anvil reads no sensor.</p>
+
 <h2>The optional AI coach</h2>
 <p>Anvil has one optional AI feature, the Coach, which you reach from the Coach
-tab or from the Travel sheet. It is powered by Claude,
+tab (on iPhone, also from the Travel sheet). It is powered by Claude,
 an artificial intelligence service operated by Anthropic. You type a request
-about your training plan (build a program, change today's workout, adjust for
+about your training plan (build a program, change today's workout, and on iPhone adjust for
 travel) and the coach answers with a plan you can review, apply, or discard.</p>
 <p>The Coach is optional, and the rest of the app works fully without it.
 Nothing is sent to Anthropic unless you use the Coach and have agreed to it
 first.</p>
 <p>The in-workout briefing, which suggests a next step for each lift as you
-train, is worked out on your iPhone from your own logged sets. It does not use
+train, is worked out on your phone from your own logged sets. It does not use
 AI, needs no account, and sends nothing to us or to Anthropic.</p>
 
 <h3>Signing in</h3>
 <p>Using the Coach requires an account on our backend, so that your
 requests belong to you and can be deleted with you. You can:</p>
 <ul>
-  <li><strong>Sign in with Apple.</strong> You can choose to share your name and
-  email with us (Apple may provide a private relay email address instead of your
-  real one, at your choice), or</li>
-  <li><strong>Continue as guest.</strong> Anvil creates an anonymous account with
-  no name or email attached.</li>
+  <li><strong>Sign in with Apple</strong> (iPhone). You can choose to share your
+  name and email with us (Apple may provide a private relay email address instead
+  of your real one, at your choice), or</li>
+  <li><strong>Continue as guest</strong> (iPhone and Android). Anvil creates an
+  anonymous account with no name or email attached.</li>
 </ul>
+<p>Your sign-in is kept on your phone; on Android it is an encrypted token sealed
+with a key in the Android Keystore, in app storage that backup leaves out. If you
+sign out (or, on Android, uninstall the app, clear its storage or move to a new
+phone), a guest account can no longer be reached from your phone, and because it has no name or email we cannot find it for
+you either. To remove a guest account and its stored requests, delete it in the app
+before you sign out, uninstall or switch phones; uninstalling does not delete it.</p>
 
 <h3>Your permission comes first</h3>
 <p>The first time the Coach is about to send anything, the app shows you
@@ -106,17 +135,20 @@ on the phone is asked for themselves.</p>
   <li>your equipment setup: the equipment you have checked off, whether you use
   a plate inventory, the settings of any plate-loaded machines, and the end
   date and equipment of a travel window, including one you are planning when you
-  ask the Coach to adapt for travel;</li>
+  ask the Coach to adapt for travel (iPhone only; Anvil for Android does not send
+  travel);</li>
   <li>your preferred weight unit (pounds or kilograms);</li>
   <li>the previous turns of the current conversation, up to the last ten, as
   text (attachments are never re-sent);</li>
-  <li>a photo, PDF, or plain-text document, only if you attach one; and</li>
+  <li>a photo, PDF, or plain-text document, only if you attach one (you pick it
+  with the phone's own photo or file picker, and Anvil reads only the file you
+  pick; a photo is resized before it is sent); and</li>
   <li>the app's built-in exercise catalog, which is not personal data.</li>
 </ul>
 
 <h3>What is never sent to Anthropic</h3>
-<p>Anvil never sends your name, your email address, your Apple ID, your
-account identifier, your device identifiers, or your location to Anthropic, and
+<p>Anvil never sends your name, your email address, your Apple ID or Google
+Account, your account identifier, your device identifiers, or your location to Anthropic, and
 sends no part of your training log beyond what is listed above. A document
 you choose to attach is sent as you provide it, so anything inside it (an
 author name in a PDF, for example) travels with it.</p>
@@ -135,14 +167,21 @@ edit, apply, or discard in the app.</p>
   and the AI requests described above.</li>
   <li><strong>Anthropic</strong> operates the Claude service that processes the
   content of each Coach request to produce your plan.</li>
-  <li><strong>Apple Maps</strong> is used only when you open the gym map: it
-  receives the area the map shows and any search text, sent straight from your
-  iPhone to Apple, never through Anvil.</li>
+  <li><strong>Apple Maps</strong> (iPhone only) is used only when you open the gym
+  map: it receives the area the map shows and any search text, sent straight from
+  your iPhone to Apple, never through Anvil.</li>
+  <li><strong>YouTube</strong> is opened only when you tap an exercise's how-to
+  video link. The link is a YouTube search for the exercise's name, so your phone's
+  browser or YouTube app contacts YouTube then, not Anvil, and YouTube's own policy
+  applies.</li>
+  <li><strong>Google</strong> (Android) holds the backup copy described above, if your
+  phone's backup is on.</li>
 </ul>
 <p>Supabase and Anthropic process this data only to provide their service to
 Anvil, under contractual data protection terms that give your data the same or
-equal protection described in this policy. Apple Maps is a direct connection
-from your iPhone, described above, and is not covered by those terms.</p>
+equal protection described in this policy. Apple Maps, YouTube and Google's backup are direct
+connections between your phone and those companies, described above, and are not
+covered by those terms.</p>
 <p>Apart from the services listed above, we do not share your data with any
 other third parties. We do not sell your
 data, show ads, or use it for cross-app or cross-site tracking.</p>
@@ -151,11 +190,21 @@ data, show ads, or use it for cross-app or cross-site tracking.</p>
 <p>Each AI request, including any attachment and the answer that came back, is
 stored on our backend under your account so the feature can work, so we can
 limit abuse, and so we can troubleshoot failures. These records are kept until
-you delete your account. You can delete your account and every request stored
-with it directly in the app, from Settings, or by emailing
-<a href="mailto:vandervalkjoel@gmail.com">vandervalkjoel@gmail.com</a> and we
-will remove it. Your on-device workout history is controlled entirely by you
-through the app and your device, independent of any account.</p>
+you delete your account.</p>
+<p>You can delete your account and every request stored with it directly in the
+app (on Android: Settings, then Delete account in the Account section; on iPhone:
+Settings, then Account, then Delete account). The page <a href="delete-account.html">How to delete your
+Anvil account</a> has the steps, what is removed and what is not. If your account
+has an email address, you can also email
+<a href="mailto:vandervalkjoel@gmail.com">vandervalkjoel@gmail.com</a> from that
+address and we will remove it. A guest account has no email address to match, so
+deleting it in the app is the only route for a guest account.</p>
+<p>Deleting an account does not remove a small usage record that the backend keeps
+for each Coach call: the model used, token counts, timing, the outcome and a
+fingerprint of the request. It holds none of your text, program or attachment, and
+deleting your account cuts its link to you. These records have no set end date. Your on-device workout history is
+controlled entirely by you through the app and your device, independent of any
+account.</p>
 
 <h2>Children</h2>
 <p>Anvil is not directed at children under 13 and we do not knowingly collect
