@@ -103,7 +103,13 @@ requests belong to you and can be deleted with you. You can:</p>
 <ul>
   <li><strong>Sign in with Apple</strong> (iPhone). You can choose to share your
   name and email with us (Apple may provide a private relay email address instead
-  of your real one, at your choice), or</li>
+  of your real one, at your choice),</li>
+  <li><strong>Sign in with Google</strong> (Android). Google's sign-in screen on
+  your phone gives Anvil a Google ID token, which Anvil exchanges with Supabase for
+  an Anvil account. Supabase stores your email address and, as Google provides them,
+  your name and profile picture link. Anvil does not use them for anything else, and
+  your name and email are never sent to Anthropic. Google's own privacy policy
+  covers what Google does with the sign-in, or</li>
   <li><strong>Continue as guest</strong> (iPhone and Android). Anvil creates an
   anonymous account with no name or email attached.</li>
 </ul>
@@ -174,12 +180,13 @@ edit, apply, or discard in the app.</p>
   video link. The link is a YouTube search for the exercise's name, so your phone's
   browser or YouTube app contacts YouTube then, not Anvil, and YouTube's own policy
   applies.</li>
-  <li><strong>Google</strong> (Android) holds the backup copy described above, if your
-  phone's backup is on.</li>
+  <li><strong>Google</strong> (Android) runs the sign-in screen if you choose Sign in
+  with Google, and holds the backup copy described above if your phone's backup is
+  on.</li>
 </ul>
 <p>Supabase and Anthropic process this data only to provide their service to
 Anvil, under contractual data protection terms that give your data the same or
-equal protection described in this policy. Apple Maps, YouTube and Google's backup are direct
+equal protection described in this policy. Apple Maps, YouTube, Google's sign-in screen and Google's backup are direct
 connections between your phone and those companies, described above, and are not
 covered by those terms.</p>
 <p>Apart from the services listed above, we do not share your data with any
