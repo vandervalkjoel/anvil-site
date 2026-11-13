@@ -48,7 +48,8 @@ question, or to request deletion of your data, contact
 weights, is stored on your device. On iPhone that is Apple's on-device storage
 (SwiftData). On Android it is a database on the phone (Room) and the app's
 settings files (DataStore). No account is required to use the app, and this
-data is never uploaded to us.</p>
+data is never uploaded to us, except what a feedback screenshot you choose to send from a
+test build shows (see <a href="#feedback-reports">Feedback reports</a>).</p>
 
 <h3>On iPhone: iCloud and location</h3>
 <p>If your iPhone is signed in to iCloud, Anvil also keeps a copy of this data
@@ -91,15 +92,18 @@ an artificial intelligence service operated by Anthropic. You type a request
 about your training plan (build a program, change today's workout, and on iPhone adjust for
 travel) and the coach answers with a plan you can review, apply, or discard.</p>
 <p>The Coach is optional, and the rest of the app works fully without it.
-Nothing is sent to Anthropic unless you use the Coach and have agreed to it
-first.</p>
+The app sends nothing to Anthropic unless you use the Coach and have agreed to it
+first. In test builds, a feedback report you choose to send is stored on our backend, not
+sent to Anthropic by the app; see <a href="#feedback-reports">Feedback reports</a> for how it is read.</p>
 <p>The in-workout briefing, which suggests a next step for each lift as you
 train, is worked out on your phone from your own logged sets. It does not use
 AI, needs no account, and sends nothing to us or to Anthropic.</p>
 
 <h3>Signing in</h3>
 <p>Using the Coach requires an account on our backend, so that your
-requests belong to you and can be deleted with you. You can:</p>
+requests belong to you and can be deleted with you. In test builds, sending a
+feedback report while signed out creates a guest account the same way, so the
+report belongs to you and is deleted with you. You can:</p>
 <ul>
   <li><strong>Sign in with Apple</strong> (iPhone). You can choose to share your
   name and email with us (Apple may provide a private relay email address instead
@@ -153,9 +157,11 @@ on the phone is asked for themselves.</p>
 </ul>
 
 <h3>What is never sent to Anthropic</h3>
-<p>Anvil never sends your name, your email address, your Apple ID or Google
+<p>A Coach request never carries your name, your email address, your Apple ID or Google
 Account, your account identifier, your device identifiers, or your location to Anthropic, and
-sends no part of your training log beyond what is listed above. A document
+carries no part of your training log beyond what is listed above. (A feedback report in a test
+build holds your account id and phone model; how it is read is described under
+<a href="#feedback-reports">Feedback reports</a>.) A document
 you choose to attach is sent as you provide it, so anything inside it (an
 author name in a PDF, for example) travels with it.</p>
 
@@ -167,10 +173,20 @@ We do not use your data to train any artificial intelligence model either.
 Claude returns a plan, which you can review,
 edit, apply, or discard in the app.</p>
 
+<h2>Feedback reports (test builds only)</h2>
+<p id="feedback-reports">In test builds only (TestFlight and developer builds), shaking your phone opens a
+feedback form. When you send a report, we store it on our backend (Supabase) under your account: the
+category you picked, your message, the screenshot and any photos you attached, the platform, app version
+and build, the build type (developer or TestFlight), your phone's OS version and model, the screen you were
+on, your account id and whether you are signed in as a guest. The app sends it to no one else.
+The developer reads these reports and may review them with the help of Anthropic's Claude, the AI provider
+named above. A report and its photos are deleted with your account. The form is switched off
+in App Store and Google Play builds for customers.</p>
+
 <h2>Where your data goes</h2>
 <ul>
-  <li><strong>Supabase</strong> hosts our backend: your account (if you sign in)
-  and the AI requests described above.</li>
+  <li><strong>Supabase</strong> hosts our backend: your account (if you sign in),
+  the AI requests described above, and, in test builds, feedback reports and their photos.</li>
   <li><strong>Anthropic</strong> operates the Claude service that processes the
   content of each Coach request to produce your plan.</li>
   <li><strong>Apple Maps</strong> (iPhone only) is used only when you open the gym
